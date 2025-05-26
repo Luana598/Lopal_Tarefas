@@ -11,60 +11,23 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.dev.luana.tarefas.dao.FuncionarioDAO;
+import br.dev.luana.tarefas.gui.FrameFuncionario;
+import br.dev.luana.tarefas.gui.FrameListaFuncionario;
 import br.dev.luana.tarefas.model.Funcionario;
 import br.dev.luana.tarefas.model.Tarefa;
+import br.dev.luana.tarefas.utils.Utils;
 
 public class Main {
 	private static String path = "C:\\Users\\25132776\\tarefa\\tarefas.txt";
 
 	public static void main(String[] args) {
 		
-		List<String> frutas = new ArrayList<>();
-		List<Funcionario> funcionarios = new ArrayList<Funcionario>();
-		List<Double> numeros = new ArrayList<>();
+		new FrameListaFuncionario();
 		
-		Funcionario funcionario = new Funcionario();
-		funcionario.setCodigo(4);
-		funcionario.setNome("Carlos Eduardo");
-		funcionario.setMatricula("25132776");
-		funcionario.setEmail("carlos@gmail.com");
-		
-		Funcionario funcionario2 = new Funcionario();
-		funcionario2.setCodigo(5);
-		funcionario2.setNome("Camila Loures");
-		funcionario2.setMatricula("251456758");
-		funcionario2.setEmail("camila@gmail.com");
-		
-		funcionarios.addAll(List.of(funcionario, funcionario2));
-		
-		frutas.add("maracujá");
-		frutas.add("manga");
-		frutas.add("uva verde");
-		frutas.add("abacaxi");
+		}
 	
-		System.out.println(frutas);
-		System.out.println(funcionarios);
-		
-		 for (Funcionario f : funcionarios) {
-			 System.out.println(f.getNome() + " - " + f.getEmail());
-		 }
-		
-//		Funcionario funcionario = new Funcionario();
-//		funcionario.setCodigo(3);
-//		funcionario.setNome("Rebeca gomes");
-//		funcionario.setMatricula("25132567");
-//		funcionario.setEmail("rebeca@gmail.com");
-//		
-//		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
-//		dao.gravar();
-//		
-//		System.out.println(funcionario.toString());
-		
-		
-//		gravarArquivo();
-	//  lerArquivo();
-	
-	}
+
+
 	
 	private static void gravarArquivo() {
 		FileWriter arquivo = null;
