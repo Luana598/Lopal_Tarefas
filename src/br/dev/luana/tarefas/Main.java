@@ -12,6 +12,7 @@ import java.util.List;
 
 import br.dev.luana.tarefas.dao.FuncionarioDAO;
 import br.dev.luana.tarefas.gui.FrameFuncionario;
+import br.dev.luana.tarefas.gui.FrameInicial;
 import br.dev.luana.tarefas.gui.FrameListaFuncionario;
 import br.dev.luana.tarefas.model.Funcionario;
 import br.dev.luana.tarefas.model.Tarefa;
@@ -22,13 +23,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		new FrameListaFuncionario();
+		new FrameInicial();
 		
 		}
-	
 
-
-	
 	private static void gravarArquivo() {
 		FileWriter arquivo = null;
 		BufferedWriter escritor = null;
