@@ -9,13 +9,14 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import br.dev.luana.tarefas.dao.FuncionarioDAO;
 import br.dev.luana.tarefas.model.Funcionario;
 
-public class FrameListaFuncionario {
+public class FrameFuncionarioTabela {
 	
 	private JLabel labelTitulo;
 	private JTable tableFuncionarios;
@@ -27,7 +28,7 @@ public class FrameListaFuncionario {
 	
 	private Font fontTitulo = new Font("Arial", Font.BOLD, 18);
 	
-	public FrameListaFuncionario() {
+	public FrameFuncionarioTabela() {
 		criarTela();
 	}
 	
@@ -80,13 +81,14 @@ public class FrameListaFuncionario {
 		painel.add(labelTitulo);
 		painel.add(scrollFuncionarios);
 		painel.add(btnNovo);
+
 		
 		btnNovo.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			
-				new FrameFuncionario(tela);
+				new FrameFuncionarioCadastro(tela);
 				criarTela();
 				
 			}

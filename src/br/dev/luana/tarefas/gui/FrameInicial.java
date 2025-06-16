@@ -14,7 +14,6 @@ public class FrameInicial {
 	private JButton btnFuncionarios;
 	private JButton btnTarefas;
 	private JLabel lblEscolha;
-	private JButton btnSair;
 	
 	public FrameInicial() {
 		criarTela();
@@ -43,7 +42,7 @@ public class FrameInicial {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				new FrameListaFuncionario();
+				new FrameFuncionarioTabela();
 				criarTela();
 				
 			}
@@ -58,35 +57,17 @@ public class FrameInicial {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
+				new FrameTarefaTabela();
+				criarTela();
 								
 			}
 		});
-		
-		btnSair = new JButton("Sair");
-		btnSair.setBounds(130, 200, 100, 40);
-		
-		btnSair.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				int resposta = JOptionPane.showConfirmDialog(
-						telaInicial, 
-						"Confirma a saída do sistema?", 
-						"Sair do Sistema",
-						JOptionPane.YES_NO_OPTION 
-						); 
-				
-				if (resposta == 0) {
-					telaInicial.dispose();
-				}
-			}
-		});
 		
 		painel.add(btnFuncionarios);
 		painel.add(btnTarefas);
 		painel.add(lblEscolha);
-		painel.add(btnSair);
 		
 		telaInicial.setVisible(true);
 	}

@@ -15,7 +15,7 @@ import br.dev.luana.tarefas.dao.FuncionarioDAO;
 import br.dev.luana.tarefas.model.Funcionario;
 import br.dev.luana.tarefas.utils.Utils;
 
-public class FrameFuncionario {
+public class FrameFuncionarioCadastro {
 
 	private JLabel labelCodigo;
 	private JLabel labelNome;
@@ -30,7 +30,7 @@ public class FrameFuncionario {
 	private JButton btnSalvar;
 	private JButton btnSair;
 
-	public FrameFuncionario(JFrame telaLista) {
+	public FrameFuncionarioCadastro(JFrame telaLista) {
 		criarTela(telaLista);
 	}
 

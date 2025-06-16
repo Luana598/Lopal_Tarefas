@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.dev.luana.tarefas.factory.FileFactory;
+import br.dev.luana.tarefas.factory.FileFactoryFuncionario;
 import br.dev.luana.tarefas.model.Funcionario;
 
 public class FuncionarioDAO {
 
 	private Funcionario funcionario;
-	private FileFactory ff = new FileFactory();
+	private FileFactoryFuncionario ff = new FileFactoryFuncionario();
 
 	// Método construtor
 	public FuncionarioDAO(Funcionario funcionario) {
